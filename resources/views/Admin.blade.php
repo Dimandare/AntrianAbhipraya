@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/admin/datatables.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/admin/select2.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/admin/custom.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
 		th, td { white-space: nowrap; }
@@ -35,7 +36,7 @@
 	<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
 		<div class="container">
 			<a href="./" class="navbar-brand" id="logo">
-				<img src="{{ $image3 }} height="35">
+				<img src="/img/logo_light.png" height="35">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -47,15 +48,19 @@
 						<a class="nav-link" href="./"><i class="fas fa-home" aria-hidden="true"></i> Home</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="index.php?com=pemohon_perhari"><i class="fa fa-edit" aria-hidden="true"></i> Data Pemohon</a>
+						<a class="nav-link" href=""><i class="fa fa-edit" aria-hidden="true"></i> Data Pemohon</a>  
+						{{-- index.php?com=pemohon_perhari --}}
 					</li>
 										<li class="nav-item dropdown active">
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="profil"><i class="fa fa-list" aria-hidden="true"></i> Master <span class="caret"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="profil">
-							<li><a href="index.php?com=info" class="dropdown-item"><i class="fa fa-flag" aria-hidden="true"></i> Info</a></li>
-							<li><a href="index.php?com=video" class="dropdown-item"><i class="fa fa-eye" aria-hidden="true"></i> Video</a></li>
+							<li><a href="" class="dropdown-item"><i class="fa fa-flag" aria-hidden="true"></i> Info</a></li>
+							{{-- index.php?com=info --}}
+							<li><a href="" class="dropdown-item"><i class="fa fa-eye" aria-hidden="true"></i> Video</a></li>
+							{{-- index.php?com=video --}}
 							<!--<li><a href="index.php?com=ip" class="dropdown-item"><i class="fa fa-flag" aria-hidden="true"></i> IP Address</a></li>-->
-							<li><a href="index.php?com=user" class="dropdown-item"><i class="fa fa-users" aria-hidden="true"></i> User</a></li>
+							<li><a href="" class="dropdown-item"><i class="fa fa-users" aria-hidden="true"></i> User</a></li>
+							{{-- index.php?com=user --}}
 						</ul>
 					</li>
 									</ul>
@@ -65,7 +70,7 @@
 						<ul class="dropdown-menu" aria-labelledby="profil">
 							<li><a href="index.php?com=profil" class="dropdown-item"><i class="fa fa-key" aria-hidden="true"></i> Ubah Password</a></li>
 							<li class="divider"></li>
-							<li><a href="login.php?com=logout" class="dropdown-item"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+							<li><a href="/logout" class="dropdown-item"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 						</ul>
 					</li>
 									</ul>
@@ -165,7 +170,7 @@
 	<input type="hidden" name="queue_id" id="queue_id" value="0">
 	
 	
-    {{-- <script type="text/javascript" src="{{ URL::asset('js/admin/jquery.min.js') }}"></script> --}}
+    <script type="text/javascript" src="{{ URL::asset('js/admin/jquery.min.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/admin/bootstrap.bundle.min.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/admin/datatables.min.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/admin/select2.min.js') }}"></script>

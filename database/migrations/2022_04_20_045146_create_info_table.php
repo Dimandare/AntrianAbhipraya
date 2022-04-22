@@ -13,22 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('info', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('username');
-            $table->string('password');
-            $table->enum('level', ['Administrator', 'Atasan', 'User']);
-            $table->enum('Aktif', ['aktif', 'tidak aktif']);//
-            $table->rememberToken();
+            $table->string('judul_info');
+            $table->string('isi_info');
+            $table->enum('Aktif', ['aktif', 'tidak aktif']);  //
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
-      
-       
-        
-      
     }
 
     /**
@@ -38,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('info');
     }
 };
